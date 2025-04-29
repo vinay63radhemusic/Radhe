@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Booking Form</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <div class="booking-form">
+        <h2>Book Your Music Event</h2>
+        <form id="eventForm">
+            <div class="input-box">
+                <input type="text" name="name" required>
+                <label for="name">Your Name</label>
+            </div>
+            <div class="input-box">
+                <input type="text" name="location" placeholder="Click to get your location" required>
+                <label for="location">Event Location</label>
+            </div>
+            <div class="input-box">
+                <input type="text" name="event" required>
+                <label for="event">Event Details</label>
+            </div>
+            <div class="input-box">
+                <input type="text" name="contact" required>
+                <label for="contact">Contact Number</label>
+            </div>
+            <div class="input-box">
+                <input type="date" name="date" required>
+                <label for="date" class="date-label">Event Date</label>
+            </div>
+            <button type="submit" class="submit-btn">Book Event</button>
+        </form>
+    </div>
+
+    <script src="booking.js"></script>
+</body>
+</html>

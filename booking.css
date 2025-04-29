@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #8ab7ca, #547884, #02a3e8);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.booking-form {
+    background: rgba(249, 212, 200, 0.04);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #ffffff;
+}
+
+.booking-form h2 {
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 14px 12px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #bbb;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-bottom: 2px solid #00e1ff;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -10px;
+    font-size: 12px;
+    color: #00e1ff;
+}
+
+.submit-btn {
+    padding: 14px 30px;
+    background: #00e1ff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #0f2027;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #ffffff;
+    color: #0f2027;
+    transform: scale(1.08);
+}
+
+.date-label {
+    top: -10px;
+    font-size: 12px;
+    color: #00e1ff;
+}
+
+/* Map location note style */
+.input-box input[name="location"] {
+    cursor: pointer;
+}
+
+.input-box input[name="location"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 480px) {
+    .booking-form {
+        padding: 30px 20px;
+        width: 90%;
+    }
+
+    .submit-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
