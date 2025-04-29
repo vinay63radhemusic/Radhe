@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Ratings | Music Booking</title>
+    <link rel="stylesheet" href="rating.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rate Your Experience</h1>
+        <form id="ratingForm">
+            <input type="text" id="customerName" placeholder="Enter your name" required>
+            <textarea id="customerFeedback" placeholder="Write your feedback..." required></textarea>
+            <div class="star-rating" id="starRating">
+                <span data-value="1">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="5">&#9733;</span>
+            </div>
+            <input type="hidden" id="selectedStars" value="0">
+            <button type="submit">Submit Review</button>
+        </form>
+        <section class="review-list">
+            <h2>What Our Customers Say:</h2>
+            <ul id="reviews"></ul>
+        </section>
+    </div>
+    <script src="rating.js"></script>
+</body>
+</html>
