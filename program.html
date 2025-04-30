@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Videos</title>
+    <link rel="stylesheet" href="program.css">
+</head>
+<body>
+    <header>
+        <h2>Click pictures and watch videos.</h2>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <img src="im1.jpg" alt="Program 1" onclick="openVideo('pro1.mp4')">
+            <img src="im3.png" alt="Program 2" onclick="openVideo('pro3.mp4')">
+            <img src="im4.jpg" alt="Program 3" onclick="openVideo('pro4.mp4')">
+        </section>
+
+        <section class="gallery">
+            <img src="im5.png" alt="Program 4" onclick="openVideo('pro5.mp4')">
+            <img src="img5.png" alt="Program 5" onclick="openVideo('pro6.mp4')">
+            <img src="im6.jpg" alt="Program 6" onclick="openVideo('video6.mp4')">
+        </section>
+
+        <section class="gallery">
+            <img src="img7.png" alt="Program 7" onclick="openVideo('video9.mp4')">
+            <img src="img8.jpg" alt="Program 8" onclick="openVideo('video8.mp4')">
+            <img src="im9.jpg" alt="Program 9" onclick="openVideo('video3.mp4')">
+        </section>
+    </main>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-container">
+            <iframe id="videoFrame" src="" allow="autoplay" allowfullscreen></iframe>
+            <button class="close-btn" onclick="closeVideo()">×</button>
+        </div>
+    </div>
+
+    <script>
+        function openVideo(videoUrl) {
+            const modal = document.getElementById('videoModal');
+            const frame = document.getElementById('videoFrame');
+            frame.src = videoUrl + "?autoplay=1";
+            modal.classList.add('active');
+        }
+
+        function closeVideo() {
+            const modal = document.getElementById('videoModal');
+            const frame = document.getElementById('videoFrame');
+            frame.src = "";
+            modal.classList.remove('active');
+        }
+
+        // Also close modal when clicking outside the video
+        window.onclick = function(e) {
+            const modal = document.getElementById('videoModal');
+            const container = document.querySelector('.video-container');
+            if (e.target === modal) {
+                closeVideo();
+            }
+        };
+    </script>
+</body>
+</html>
